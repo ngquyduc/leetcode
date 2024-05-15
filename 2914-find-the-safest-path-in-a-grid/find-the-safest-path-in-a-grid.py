@@ -29,7 +29,7 @@ class Solution:
                 return -safeness
             for d in self.dir:
                 di, dj = i + d[0], j + d[1]
-                if self.isValidCell(grid, di, dj):
+                if self.isValidCell(grid, di, dj) and grid[di][dj] != -1:
                     heapq.heappush(pq, [-min(-safeness, grid[di][dj]), di, dj])
                     grid[di][dj] = -1
         return -1
