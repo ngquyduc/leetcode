@@ -15,7 +15,6 @@ class Solution:
             if curr.right:
                 inOrderTraverse(curr.right)
         inOrderTraverse(root)
-        arr.sort()
         def arrToBalancedBST(arr, start, end):
             if start > end:
                 return None
